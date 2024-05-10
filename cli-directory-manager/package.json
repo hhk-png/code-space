@@ -1,0 +1,25 @@
+{
+  "name": "directory_manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  ".bin": {
+    "directory_manager": "dist/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "figlet": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/figlet": "^1.5.6",
+    "@types/node": "^20.3.1"
+  }
+}

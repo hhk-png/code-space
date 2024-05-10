@@ -1,0 +1,13 @@
+{
+  "name": "jsonimplementation",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.3",
+    "vitest": "^1.5.0"
+  }
+}

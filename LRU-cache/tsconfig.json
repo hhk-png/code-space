@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "ES2022",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "moduleResolution": "Node",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "downlevelIteration": true
+  },
+  "type": "module"
+}

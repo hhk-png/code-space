@@ -1,0 +1,32 @@
+
+
+/**** Parsed Code  ****/
+pre code .string {
+  color:#A1E46D;
+}
+pre code .special {
+  color:#D6665D;
+}
+pre code .special-js {
+  color:#6DE4D1;
+}
+pre code .special-js-glob {
+  color:#A1E46D;
+  font-weight:bold;
+}
+pre code .special-comment{
+  color:#aaa;
+}
+pre code .special-js-meth {
+  color:#E46D8A;
+}
+pre code .special-html {
+  color:#E4D95F;
+}
+pre code .special-sql {
+  color:#1D968C;
+}
+pre code .special-php{
+  color:#597EA7;
+}
+
