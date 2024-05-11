@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>flexLayout</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部标题 -->
+        <header>
+            <h1>Ink</h1>
+        </header>
+        <!-- 导航栏 -->
+        <nav>
+            <ul class="site-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/support">Support</a></li>
+                <li class="nav-right">
+                    <a href="/about">About</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- 内容 -->
+        <main class="flex">
+            <!-- 左侧 -->
+            <div class="column-main tile">
+                <h1>Team collaboration done right</h1>
+                <p>Thousands of teams from all over the
+                    world turn to <b>Ink</b> to communicate
+                    and get things done.</p>
+            </div>
+            <!-- 右侧 -->
+            <div class="column-sidebar">
+                <!-- 右侧上部，登录模块 -->
+                <div class="tile">
+                    <form class="login-form">
+                        <h3>Login</h3>
+                        <p>
+                            <label for="username">Username</label>
+                            <input id="username" type="text" name="username" />
+                        </p>
+                        <p>
+                            <label for="password">Password</label>
+                            <input id="password" type="password" name="password" />
+                        </p>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+                <!-- 右侧下部，商品信息 -->
+                <div class="tile centered">
+                    <small>Starting at</small>
+                    <div class="cost">
+                        <span class="cost-currency">$</span>
+                        <span class="cost-dollars">20</span>
+                        <span class="cost-cents">.00</span>
+                    </div>
+                    <a class="cta-button" href="/pricing">
+                        Sign up
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

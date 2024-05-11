@@ -1,0 +1,84 @@
+/* 给页面上所有元素和伪元素设置 border-box */
+:root {
+    box-sizing: border-box;
+}
+
+/* 如果直接加上 box-sizing: border-box; 可能会影响网页中带央视的第三方组件，
+    就可能因此破坏其中一些组件的布局，尤其是当第三方组件在开发 CSS 的过程中没有考虑到使用者会修改盒模型时 */
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body * + * {
+    margin-top: 1.5em;
+}
+
+/* header */
+header {
+    /* 给头部添加上下内边距，外边距就不会再容器外部折叠 */
+    padding: 1em .15em;
+    color: #fff;
+    background-color: #0072b0;
+    border-radius: .5em;
+}
+
+/* 修复ie 的 bug */
+main {
+    display: block;
+}
+
+
+/* body */
+.container {
+    display: flex;
+}
+
+/* 内容区域左侧 */
+.main {
+    float: left;
+    width: 70%;
+    padding: 1em 1.5em;
+    background-color: #fff;
+    border-radius: .5em;
+}
+
+/* 内容区域右侧 */
+.sidebar {
+    float: left;
+    width: 30%;
+    padding: 1.5em;
+    margin-top: 0;
+    margin-left: 1.5em;
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: .5em;
+}
+
+.button-link {
+    display: block;
+    padding: 0.5em;
+    color: #fff;
+    background-color: #0090C9;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* 只给紧跟在其他 .button-link 后面的 .button-link 加上顶部边距 */
+.button-link + .button-link {
+    margin-top: 1.5em;
+}
+
+.sponsor-link {
+    display: block;
+    color: #0072b0;
+    font-weight: bold;
+    text-decoration: none;
+}

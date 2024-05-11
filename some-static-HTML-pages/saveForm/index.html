@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>save</title>
+</head>
+
+<body>
+    <form>
+        <label for="trip">Tell us about your first trip to the zoo:</label>
+        <textarea id="trip" name="about-my-trip" rows="5"></textarea>
+        <button type="submit" id="submit-button">Save</button>
+    </form>
+    <script>
+        var input = document.getElementById('trip');
+        var button = document.getElementById('submit-button');
+
+        var timeout = null
+
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            clearTimeout(timeout);
+            button.classList.add('is-loading');
+            button.disabled = true;
+            input.disabled = true;
+            input.disabled = true;
+        });
+
+        input.addEventListener('keyup', function() {
+            clearTimeout(timeout);
+            timeout = setTimeout(function() {
+                button.classList.add('shake');
+            }, 500);
+        })
+
+        button.addEventListener('animationed', function() {
+            button.classList.remove('shake');
+        })
+
+    </script>
+</body>
+
+</html>

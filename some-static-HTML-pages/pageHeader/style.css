@@ -1,0 +1,99 @@
+/* 用户代理样式 默认样式 */
+/* h1 {
+    font-family: serif;
+}
+
+#page-title {
+    font-family: sans-serif;
+}
+
+.title {
+    font-family: monospace;
+} */
+
+
+/* 选择器优先级判断 */
+/* 
+    !important
+    行内样式 style=""
+    id
+    class
+    标签
+ */
+
+/* 清除默认样式 */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+ul {
+    padding: 0;
+}
+
+/* 标题 */
+.page-header h1 {
+    color: #2f4f4f;
+    margin-bottom: 0.625em;
+    font-weight: bold;
+}
+
+.title {
+    font: 32px Helvetica, Arial, sans-serif;
+}
+
+/* 导航栏 */
+.nav {
+    margin-top: 0.625em;
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.nav a {
+    color: white;
+    background-color: #13a4a4;
+    padding: 0.3125em;
+    border-radius: 0.125em;
+    /* 清除 a 标签默认 */
+    text-decoration: none;
+}
+
+/* 这种写法的优先级要低于 ".nav a" */
+/* .featured {
+    background-color: orange;
+} */
+
+/* 优先级与 .nav a 相同 */
+a.featured {
+    background-color: orange;
+    /* text-decoration: underline; */
+}
+
+
+/* 页脚 */
+/* footer */
+.footer {
+    color: #666;
+    background-color: #ccc;
+    padding: 0.9375em 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer a {
+    color: inherit;
+    /* black */
+    /* color: initial; */
+    text-decoration: underline;
+}
+
+
+
+
+

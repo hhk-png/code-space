@@ -1,0 +1,59 @@
+:root {
+    /* font-size: 0.875em; */
+    /* 使用calc() 结合em 和vh 两种单位定义font-size */
+    font-size: calc(0.5em + 1vw);
+    /* 自定义属性，在 :root 下定义，可以在整个网页中使用 */
+    --main-font: Helvetica, Arial, sans-serif;
+    --main-bg: #fff;
+    --main-color: #000;
+}
+
+/* 用于bgc 和 color 颜色的中转 */
+/*  被dark class 包裹的元素将会使用其中的变量 */
+.dark {
+    /* margin-top: 2em; */
+    padding: 1em;
+    background-color: #999;
+    --main-bg: #333;
+    --main-color: #fff
+}
+
+
+.panel {
+    /* 给组件设置一个可预测的字号 */
+    font-size: 1rem;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid #999;
+    background-color: var(--main-bg);
+    color: var(--main-color);
+}
+
+
+.panel > h2 {
+    margin-top: 0;
+    /* 用em 定义其他字号，使其相对于父元素的字号 */
+    font-size: 0.8em;
+    font-weight: bold;
+    /* 通过var() 使用变量 */
+    font-family: var(--main-font);
+    text-transform: uppercase;
+}
+
+.panel.large {
+    font-size: 1.2em;
+}
+
+/* 仅作用到 800px 以上的屏幕，覆盖之前的值 */
+@media (min-width: 800px) {
+    :root {
+        font-size: 0.875em;
+    }
+}
+
+/* 仅作用到 1200px 以上的屏幕，覆盖之前的值 */
+@media (min-width: 1200px) {
+    :root {
+        font-size: 1em;
+    }
+}

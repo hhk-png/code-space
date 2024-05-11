@@ -1,0 +1,79 @@
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body * + * {
+    margin-top: 1.5em;
+}
+.row {
+    margin-left: -0.75em;
+    margin-right: -0.75em;
+}
+.row::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* 网页标题 */
+header {
+    padding: 1em 1.5em;
+    color: #fff;
+    background-color: #0072b0;
+    border-radius: .5em;;
+    margin-bottom: 1.5em;
+}
+
+/* 内容 菜单栏 */
+.main {
+    padding: 0.5em 1.5em 1.5em 3em;
+    background-color: #fff;
+    border-radius: .5em;
+}
+
+/* 菜单栏单元 */
+.media {
+    float: left;
+    margin: 0 1.5em 1.5em 0;
+    width: calc(50% - 1.5em);
+    padding: 1.5em;
+    background-color: #ddd;
+    border-radius: 0.5em;
+}
+.media:nth-child(even) {
+    clear: left;
+}
+
+/* 菜单栏内的内容 */
+.media-image {
+    float: left;
+    margin-right: 1.5em;
+}
+
+.media-body {
+    /* 创建一个新的 BFC，这样正文就不会跟浮动的照片重叠 */
+    overflow: auto;
+    margin-top: 0;
+}
+
+.media-body h4 {
+    margin-top: 0;
+}
+
+

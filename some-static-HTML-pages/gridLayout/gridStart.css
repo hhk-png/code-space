@@ -1,0 +1,16 @@
+.grid {
+    display: grid;
+    /* 等宽的三列 */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 等高的两列 */
+    grid-template-rows: 1fr 1fr;
+    /* 给每个网格的单元格之间加上间隔 */
+    grid-gap: 0.5em;
+}
+
+.grid > * {
+    background-color: darkgray;
+    color: white;
+    padding: 2em;
+    border-radius: .5em;
+}
